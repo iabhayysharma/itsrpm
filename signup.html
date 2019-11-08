@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <title>Sign up</title>
+
+  <style>
+
+    body {
+  position: fixed;
+  margin: auto;
+  /* border:none; */
+  }
+  #rpm{
+    width: 70vw;
+    height: 200px;
+    text-align: center;
+  }
+  #heading{
+    font-family: 'Satisfy', cursive;
+    letter-spacing: 12px;
+
+  }
+  #homepage{
+    height: 100vh;
+    width: 100vw;
+    background: url(tata.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+.backimag{
+  width: 840px;
+  height: 100vh;
+  /* border: 2px solid red; */
+
+}
+.myform{
+/* border: 2px solid green; */
+margin-left: 843px;
+margin-top: -760px;
+width:670px;
+height: 700px;
+}
+.form{
+  margin-top: 150px;
+  margin-left: 200px;
+}
+.tx,.pas,.bu,.rpa,.fn,.ema{
+  height: 40px;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px 5px rgba(0,0,0,0.4);
+  color: #e6891d;
+  font-size: 20px;
+}
+::placeholder{
+  color:palevioletred;
+}
+.bu{
+  background-color: #e6891d;
+  border:none;
+  transition: 2s;
+  color:white;
+  border-radius: 10px;
+}
+.bu:hover{
+  box-shadow:none;
+  background: purple;
+  transition: 2s;
+}
+.acc{
+  color: #ef5c02dd;
+  margin-left: 230px;
+  margin-top: 35px;
+}
+a{
+  color: red;
+  text-decoration: none;
+}
+a:hover{
+  text-shadow: 1px 1px 2px grey;
+}
+hr{
+  width: 70px;
+}
+.hr1{
+  margin-left: 260px;
+  margin-top: 40px;
+}
+.hr2{
+  margin-top: -24.5px;
+  margin-left: 380px;
+}
+.or{
+  color: grey;
+  margin-left: 350px;
+  margin-top: -18px;
+}
+.social{
+  color: #ef5c02dd;
+  margin-left: 270px;
+  margin-top: 80px;
+}
+.fb,.twi,.go,.li{
+  height:30px;
+   width:30px;
+}
+.fb{
+  margin-left: 250px;
+  margin-top: 10px;
+}
+.twi,.go,.li{
+  margin-left: 30px;
+}
+.name{
+  color: red;
+  position: absolute;
+  display: block;
+ font-size: 60px;
+ /* font-family: Calibri; */
+ margin-left: 250px;
+ margin-top: -80px;
+}
+.right{
+  font-size: 15px;
+  margin-top: 480px;
+  margin-left: 40px;
+  color: black;
+}
+.la{
+  margin-left: 260px;
+  width:100px;
+  height:auto;
+  margin-left:1000px;
+  margin-top: -21px;
+}
+#date1{
+  width: 200px;
+  height: auto;
+  margin-top: -20px;
+  margin-left: 20px;
+  position: absolute;
+}
+#date{
+  text-align: center;
+  font-size: 25px;
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+}
+
+</style>
+
+</head>
+
+
+<body>
+  <section id="homepage">
+    <div class="name" id="rpm">
+      <h1 id="heading"><b>ItsRPM<b></h1>
+      <p class="right">Copyright © 2019 - All Right Reserved</p>
+    </div>
+
+    <div id="date1">
+      <p id="date"></p>
+    </div>
+
+    <div class="backimag">
+
+      <div class="la">
+        <h1>SIGN UP</h1>
+      </div>
+
+    </div>
+
+    <div class="myform">
+
+
+
+      <form class="form" action="index.html" method="post" name="fo">
+        <input type="email" name="email" value="" placeholder="Email" class="ema"><br>
+        <input type="text" name="name" value="" placeholder="Full Name" class="fn"><br>
+        <input type="text" name="un" placeholder=" User Name" value="" class="tx"><br>
+        <input type="password" name="pa" value="" placeholder=" Password" class="pas"><br>
+        <input type="password" name="re" value="" placeholder="Re-enter Password" class="rpa"><br>
+        <button type="button" name="" class="bu" onclick="login()"><b>SIGN IN</b></button>
+      </form>
+
+      <p class="acc">Don't have an account ? <a href="index.html">Login Now</a> </p>
+
+      <hr class="hr1">
+      <p class="or">Or</p>
+      <hr class="hr2">
+
+      <p class="social">Continue with social media<p>
+          <a href="#"> <img src="download.png" alt="" class="fb">
+            <img src="download (1).png" alt="" class="twi">
+            <img src="download (2).png" alt="" class="go">
+            <img src="download (3).png" alt="" class="li">
+          </a>
+    </div>
+
+  </section>
+
+  <script>
+    function login() {
+      var name = document.fo.pa.value;
+      var pass = document.fo.re.value;
+
+      if (pass == name) {
+        window.open('www.google.com');
+      } else {
+        alert('Wrong Password');
+      }
+
+    }
+
+    function time1() {
+      let d = new Date();
+      let nn;
+      let n1 = d.getDay();
+      if (n1 == 1) {
+        nn = 'Monday'
+      } else if (n1 == 2) {
+        nn = 'Tuesday'
+      } else if (n1 == 3) {
+        nn = 'Wednesday';
+      } else if (n1 == 4) {
+        nn = 'Thursday';
+      } else if (n1 == 5) {
+        nn = 'Friday';
+      } else if (n1 == 6) {
+        nn = 'Saturday';
+      } else if (n1 == 7) {
+        nn = 'Sunday';
+      }
+
+      let n = d.getMonth();
+
+      if (n == 0) {
+        myMonths = "January"
+      } else if (n == 1) {
+        myMonths = "February"
+      } else if (n == 2) {
+        myMonths = "March"
+      } else if (n == 3) {
+        myMonths = "April"
+      } else if (n == 4) {
+        myMonths = "May"
+      } else if (n == 5) {
+        myMonths = "June"
+      } else if (n == 6) {
+        myMonths = "July"
+      } else if (n == 7) {
+        myMonths = "August"
+      } else if (n == 8) {
+        myMonths = "September"
+      } else if (n == 9) {
+        myMonths = "October"
+      } else if (n == 10) {
+        myMonths = "November"
+      } else if (n == 11) {
+        myMonths = "December"
+      }
+      y = d.getFullYear();
+      x = d.getUTCDate();
+
+      return (`${nn}|${myMonths}${x}|${y}`);
+    }
+    document.querySelector('#date').innerHTML = time1();
+  </script>
+
+</body>
+
+</html>
